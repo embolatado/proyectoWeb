@@ -20,5 +20,5 @@ from webBlog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('', include('webBlog.urls'))
+    path('', include('webBlog.urls')),
 ]
