@@ -1,0 +1,17 @@
+
+body {
+    background-color: lightcyan;
+    margin: 0;
+    padding: 0;    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo {
+    display: block;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: salmon;
+    background-image: url('../img/logo-trns.png');
+}
+
