@@ -18,18 +18,17 @@
         
         <nav>
             <ul class="menu">
-                <li class="menu__item"><a href="{% url 'Home' %}">Inicio</a></li>
-                <li class="menu__item"><a href="{% url 'Servicios' %}">Servicios</a></li>
-                <li class="menu__item"><a href="{% url 'Tienda' %}">Tienda</a></li>
-                <li class="menu__item"><a href="{% url 'Blog' %}">Blog</a></li>
-                <li class="menu__item"><a href="{% url 'Contacto' %}">Contacto</a></li>
+                <li class="menu__item {% if request.path == '/' %}seccion{% endif %}"><a href="{% url 'Home' %}">Inicio</a></li>
+                <li class="menu__item {% if request.path == '/servicios' %}seccion{% endif %}"><a href="{% url 'Servicios' %}">Servicios</a></li>
+                <li class="menu__item {% if request.path == '/tienda' %}seccion{% endif %}"><a href="{% url 'Tienda' %}">Tienda</a></li>
+                <li class="menu__item {% if request.path == '/blog' %}seccion{% endif %}"><a href="{% url 'Blog' %}">Blog</a></li>
+                <li class="menu__item {% if request.path == '/contacto' %}seccion{% endif %}"><a href="{% url 'Contacto' %}">Contacto</a></li>
             </ul>
         </nav>
 
         <div class="main-container">
             <div class="content-container"> 
             {% block content %}
-            
             {% endblock %}
             </div>
         </div>

@@ -25,8 +25,9 @@ header {
     text-align: center;
 }
 
-.menu li {
-    margin: 1rem 0;
+.menu__item {
+    margin: 0.5rem 0;
+    padding: 4px;
 }
 
 .menu a {
@@ -41,6 +42,19 @@ header {
     text-transform: uppercase;
     color: #043391;
 }
+
+.menu a:active {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4d0491;
+}
+
+.seccion a {
+    color: green;
+    text-decoration: underline;
+}
+
+
 
 .main-container {
     width: 90%;
