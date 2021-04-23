@@ -1,13 +1,39 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        {% load static %}
-        <title>Index</title>
+    {% load static %}
+        <title>{% block title %}Base Template{% endblock %}</title>
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link rel="stylesheet" href="{% static 'webBlog/css/estilos.css' %}">
+        <link rel="icon" type="image/png" href="{% static 'webBlog/img/favicon.png' %}"/>
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     </head>
+    
     <body>
-        <div class="logo">
-        <!--img src="{% static 'webBlog/img/logo-trns.png' %}" alt=""-->
+        <header>
+            <div class="logo"></div>
+        </header>
+        
+        <nav>
+            <ul class="menu">
+                <li class="menu__item"><a href="{% url 'Home' %}">Inicio</a></li>
+                <li class="menu__item"><a href="{% url 'Servicios' %}">Servicios</a></li>
+                <li class="menu__item"><a href="{% url 'Tienda' %}">Tienda</a></li>
+                <li class="menu__item"><a href="{% url 'Blog' %}">Blog</a></li>
+                <li class="menu__item"><a href="{% url 'Contacto' %}">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-container">
+            <p>Inicio desde <i>template</i></p>
         </div>
-        <p>Inicio desde <i>template</i></p>
+        
+
+        <footer>
+            <p>Proyecto WebApp Django – 2021</p>
+        </footer>
     </body>
 </html>

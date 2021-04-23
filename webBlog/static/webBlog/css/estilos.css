@@ -1,17 +1,74 @@
 
 body {
-    background-color: lightcyan;
-    margin: 0;
-    padding: 0;    
+    background-color: lightcyan; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 auto;
+    height: 100vh;    
 }
 
 .logo {
     display: block;
     width: 200px;
-    height: 300px;
-    margin: 0 auto;
-    background-color: salmon;
-    background-image: url('../img/logo-trns.png');
+    height: 100px;
+    margin: 20px auto 5px auto;
+    background-image: url('../img/logo-trns-200.png');
 }
 
+.menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    margin: 1rem 0;
+}
+
+.menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: grey;
+    padding: .475rem 2rem;
+}
+
+.menu a:hover {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: darkblue;
+}
+
+.main-container {
+    width: 80%;
+    max-width: 900px;
+    background-color: lightsteelblue;
+    margin: 0 auto;
+}
+
+
+footer {
+    background-color: lightgrey;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0;
+    color: lightslategray;
+}
+
+
+@media screen and (min-width: 780px) {
+    nav {
+        width: 74%;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+    .menu {
+        display: flex;
+        justify-content: space-between;        
+    }
+    .logo {
+        max-width: 615px;
+        margin: .5rem auto 1rem auto;
+    }    
+}
