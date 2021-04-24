@@ -10,8 +10,8 @@ class Servicio(models.Model):
     updated = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name = 'servicio'           # NOMBRE QUE TENDRÁ EL SERVICIO EN DB
-        verbose_name_plural = 'servicios'   # Y LO MISMO PERO EN PLURAL
+        verbose_name = 'servixio'           # CUANDO HAY 1 REG EN LA TABLA
+        verbose_name_plural = 'servixios'   # CUANDO HAY >1 REG EN LA TABLA
     
     def __str__(self):
         return self.titulo
