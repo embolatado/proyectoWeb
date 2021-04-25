@@ -1,17 +1,16 @@
 {% extends 'webBlog/_base.html' %}
 
-{% load static %}
-
 {% block title %}Servicios{% endblock %}
 
 {% block content %}
     <h2>Contenido estático A</h2>
     
     {% for i in srvx %}
-    <!--div style="background-color: tomato;"-->
+    <div style="background-color: azure;">
+        <img src="{{i.imagen.url}}" alt="">
         <h2>{{ i.titulo }}</h2>
         <p>{{ i.describe }}</p>
-    <!--/div-->
+    </div>
 
     {% endfor %}
     <p>Contenido estático B</p>
