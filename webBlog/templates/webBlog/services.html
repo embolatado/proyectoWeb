@@ -1,5 +1,7 @@
 {% extends 'webBlog/_base.html' %}
 
+# {% load static %}
+
 {% block title %}Servicios{% endblock %}
 
 {% block content %}
@@ -7,7 +9,7 @@
     
     {% for i in srvx %}
     <div style="background-color: azure;">
-        <img src="{{i.imagen.url}}" alt="">
+        <img src="{{i.imagen}}" alt="">
         <h2>{{ i.titulo }}</h2>
         <p>{{ i.describe }}</p>
     </div>
