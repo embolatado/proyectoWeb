@@ -60,7 +60,7 @@ header {
     width: 90%;
     max-width: 900px;
     background-color: white;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     padding: 0.5em 0;
 }
 
@@ -78,6 +78,10 @@ footer {
     left: 0;
     padding: 0;
     color: lightslategray;
+    
+    display: grid;
+    height: 50px;
+    align-content: center;
 }
 
 
