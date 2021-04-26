@@ -68,6 +68,10 @@ header {
     margin: 0.5em;
 }
 
+.imagen-centrada {
+    text-align: center;
+}
+
 
 footer {
     background-color: lightgrey;

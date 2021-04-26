@@ -9,7 +9,9 @@
     
     {% for i in srvx %}
     <div style="background-color: azure;">
-        <img src="{{i.imagen}}" alt="">
+        <div class="imagen-centrada">
+            <img src="{{i.imagen.url}}" alt="">
+        </div>
         <h2>{{ i.titulo }}</h2>
         <p>{{ i.describe }}</p>
     </div>
