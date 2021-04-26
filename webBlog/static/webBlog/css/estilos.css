@@ -46,11 +46,11 @@ header {
 .menu a:active {
     text-decoration: none;
     text-transform: uppercase;
-    color: #4d0491;
+    color: magenta;
 }
 
 .seccion a {
-    color: green;
+    color: yellowgreen;
     text-decoration: underline;
 }
 
