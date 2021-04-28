@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-
 class Categoria(models.Model):
     nomcat = models.CharField(max_length=20)
     creado = models.DateTimeField(auto_now_add=True)

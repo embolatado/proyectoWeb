@@ -10,10 +10,6 @@ def tienda(request):
     return render(request, 'webBlog/store.html')
 
 
-def blog(request):
-    return render(request, 'webBlog/blog.html')
-
-
 def contacto(request):
     return render(request, 'webBlog/contact.html')
 
