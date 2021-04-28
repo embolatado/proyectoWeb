@@ -1,6 +1,26 @@
 {% extends 'webBlog/_base.html' %}
 
+# {% load static %}
+
 {% block title %}Blog{% endblock %}
 
 {% block content %}
+
+{% for i in post %}
+
+<div style="background-color: azure;">
+    <h2>{{ i.titulo }}</h2>
+
+    {% if i.imagen %}
+        <div class="imagen-centrada">
+            <img src="{{i.imagen.url}}" alt="">
+        </div>
+    {% else %}
+        <p>Sin imagen</p>
+    {% endif %}
+    <p>{{ i.cuerpo }}</p>
+</div>
+
+{% endfor %}
+
 {% endblock %}
