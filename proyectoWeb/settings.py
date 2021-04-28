@@ -66,7 +66,7 @@ ROOT_URLCONF = 'proyectoWeb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['blog/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
