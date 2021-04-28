@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 from serviciosApp.models import Servicio
 
 # Create your views here.
