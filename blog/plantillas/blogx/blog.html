@@ -9,13 +9,11 @@
 {% for i in post %}
 <div style="background-color: azure;">
     <h2>{{ i.titulo }}</h2>
-    <p><i>Por: {{i.autor }}, 
-            
-    {% if i.creado == i.updated %}
-        Publicado: {{i.updated}}.</i></p>
-    {% else %}
-        Modificado: {{ i.creado}}.</i></p>
-    {% endif %}
+    
+    <h6>Autor: {{i.autor}}</h6>
+    <h6>Creado: {{i.creado}}</h6>
+    <h6>Modificado: {{i.updated}}</h6>
+
 
     {% if i.imagen %}
         <div class="imagen-centrada">
@@ -28,18 +26,11 @@
 </div>
 {% endfor %}
 
-<section class="menu-categorias">
-    
+<section class="menu-categorias">    
     <p>Categorias: 
-        {% for e in post %}
-    
-        {% for var in e.categorias.all %}
-
-                | {{ var.nomcat }}
-    
-        {% endfor %}
-
-    {% endfor %}</p>
+        {% for e in carcat %}
+                | {{ e }}
+        {% endfor %}</p>
 </section>
 
 {% endblock %}
