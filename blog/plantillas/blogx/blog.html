@@ -9,7 +9,13 @@
 {% for i in post %}
 <div style="background-color: azure;">
     <h2>{{ i.titulo }}</h2>
-    <p><i>Por: {{i.autor }}</i></p>
+    <p><i>Por: {{i.autor }}, 
+            
+    {% if i.creado == i.updated %}
+        Publicado: {{i.updated}}.</i></p>
+    {% else %}
+        Modificado: {{ i.creado}}.</i></p>
+    {% endif %}
 
     {% if i.imagen %}
         <div class="imagen-centrada">

@@ -7,7 +7,7 @@ class Servicio(models.Model):
     describe = models.TextField(max_length=500)
     imagen = models.ImageField(upload_to='imagenes')
     creado = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'servixio'           # CUANDO HAY 1 REG EN LA TABLA
