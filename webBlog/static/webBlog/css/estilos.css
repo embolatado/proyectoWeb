@@ -72,6 +72,14 @@ header {
     text-align: center;
 }
 
+.menu-categorias {
+    margin: 0 auto;
+    background-color: rgb(207, 197, 214);
+    width: 50%;
+    text-align: center;
+}
+
+
 
 footer {
     background-color: lightgrey;

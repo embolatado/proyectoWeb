@@ -7,9 +7,9 @@
 {% block content %}
 
 {% for i in post %}
-
 <div style="background-color: azure;">
     <h2>{{ i.titulo }}</h2>
+    <p><i>Por: {{i.autor }}</i></p>
 
     {% if i.imagen %}
         <div class="imagen-centrada">
@@ -20,7 +20,20 @@
     {% endif %}
     <p>{{ i.cuerpo }}</p>
 </div>
-
 {% endfor %}
+
+<section class="menu-categorias">
+    
+    <p>Categorias: 
+        {% for e in post %}
+    
+        {% for var in e.categorias.all %}
+
+                | {{ var.nomcat }}
+    
+        {% endfor %}
+
+    {% endfor %}</p>
+</section>
 
 {% endblock %}
