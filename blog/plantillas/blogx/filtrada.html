@@ -28,7 +28,16 @@
 
 <section class="menu-categorias">    
     <p>Categoria: | <a href="">{{ lacatego }}</a>
+</section>
 
+<section class="menu-categorias">
+    <p>Temas:
+        {% for e in carcat %}
+
+        <a href="{% url 'catx' e.id %}">{{ e }}</a>
+
+        {% endfor %}
+    </p>
 </section>
 
 {% endblock %}

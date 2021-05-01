@@ -17,4 +17,6 @@ def catx(request, categoria_id):
     # MUESTRA LOS POSTS
     entradas = Entrada.objects.filter(categorias=varcat)
     
-    return render(request, 'blogx/filtrada.html', {'lacatego': varcat, 'postca': entradas})
+    cargacat = Categoria.objects.distinct()
+
+    return render(request, 'blogx/filtrada.html', {'lacatego': varcat, 'postca': entradas, 'carcat': cargacat})
