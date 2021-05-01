@@ -7,24 +7,6 @@
 {% block content %}
 
 
-<section class="menu-categorias">
-    <p>Temas:
-        {% for i in post %}
-            {% for x in i.categorias.all %}
-                | <a href="{% url 'catx' x.id %}">{{ x.nomcat }}</a>
-            {% endfor %}
-        {% endfor %}</p>
-</section>
-
-
-<section class="menu-categorias">
-    <p>Temas:
-        {% for j in post.all %}
-
-        <a href="{% url 'catx' j.id %}">{{ j.id }}</a>
-
-        {% endfor %}</p>
-</section>
 
 
 {% for i in post %}
@@ -47,6 +29,45 @@
 </div>
 {% endfor %}
 
+<section class="menu-categorias">
+    <p>Temas:
+        {% for i in post %}
+        {% for x in i.categorias.all %}
+        | <a href="{% url 'catx' x.id %}">{{ x.nomcat }}</a>
+        {% endfor %}
+        {% endfor %}</p>
+</section>
+
+<section class="menu-categorias">
+    <p>Temas:
+        {% for i in post %}
+        {% for x in i.categorias.all %}
+        | <a href="{% url 'catx' x.id %}">{{ x.nomcat }}</a>
+        {% endfor %}
+        {% endfor %}</p>
+</section>
+
+
+<section class="menu-categorias">
+    <p>Temas:
+        {% for j in post.all %}
+
+        <a href="{% url 'catx' j.id %}">{{ j.id }}</a>
+
+        {% endfor %}
+    </p>
+</section>
+
+
+<section class="menu-categorias">
+    <p>Temas:
+        {% for e in carcat %}
+
+        <a href="{% url 'catx' e.id %}">{{ e }}</a>
+
+        {% endfor %}
+    </p>
+</section>
 
 
 {% endblock %}
