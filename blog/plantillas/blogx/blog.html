@@ -6,6 +6,27 @@
 
 {% block content %}
 
+
+<section class="menu-categorias">
+    <p>Temas:
+        {% for i in post %}
+            {% for x in i.categorias.all %}
+                | <a href="{% url 'catx' x.id %}">{{ x.nomcat }}</a>
+            {% endfor %}
+        {% endfor %}</p>
+</section>
+
+
+<section class="menu-categorias">
+    <p>Temas:
+        {% for j in post.all %}
+
+        <a href="{% url 'catx' j.id %}">{{ j.id }}</a>
+
+        {% endfor %}</p>
+</section>
+
+
 {% for i in post %}
 <div style="background-color: azure;">
     <h2>{{ i.titulo }}</h2>
@@ -26,13 +47,6 @@
 </div>
 {% endfor %}
 
-<section class="menu-categorias">    
-    <p>Categorias: 
-        {% for e in carcat %}
-                | <a href="">{{ e }}</a>
-        {% endfor %}</p>
-</section>
+
 
 {% endblock %}
-
-<!-- test de commit -->

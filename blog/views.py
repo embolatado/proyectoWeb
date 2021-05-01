@@ -6,8 +6,10 @@ from .models import Entrada, Categoria
 
 def blog(request):
     cargapost = Entrada.objects.all()
-    cargacat = Categoria.objects.distinct()
-    return render(request, 'blogx/blog.html', {'post': cargapost, 'carcat': cargacat})
+    # cargacat = Categoria.objects.distinct()
+    
+    return render(request, 'blogx/blog.html', {'post': cargapost})
+    # return render(request, 'blogx/blog.html', {'post': cargapost, 'carcat': cargacat})
 
 def catx(request, categoria_id):
     # FILTRA LA CATEGORÍA
@@ -16,4 +18,4 @@ def catx(request, categoria_id):
     entradas = Entrada.objects.filter(categorias=varcat)
     
 
-    return render(request, 'blogx/filtrada.html', {'lacatego': varcat, 'post': entradas})
+    return render(request, 'blogx/filtrada.html', {'lacatego': varcat, 'postca': entradas})
