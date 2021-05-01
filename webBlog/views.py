@@ -9,9 +9,7 @@ def inicio(request):
 def tienda(request):
     return render(request, 'webBlog/store.html')
 
-
+'''
 def contacto(request):
     return render(request, 'webBlog/contact.html')
-
-
-
+'''

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'webBlog',
     'serviciosApp',
     'blog',
+    'contactoApp',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +67,7 @@ ROOT_URLCONF = 'proyectoWeb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['blog/plantillas'],
+        'DIRS': ['blog/plantillas', 'contactoApp/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
