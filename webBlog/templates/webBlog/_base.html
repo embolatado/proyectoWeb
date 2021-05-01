@@ -22,7 +22,7 @@
                 <li class="menu__item {% if request.path == '/servicios/' %}seccion{% endif %}"><a href="{% url 'Servicios' %}">Servicios</a></li>
                 <li class="menu__item {% if request.path == '/tienda' %}seccion{% endif %}"><a href="{% url 'Tienda' %}">Tienda</a></li>
                 <li class="menu__item {% if request.path|slice:':6' == '/blog/' %}seccion{% endif %}"><a href="{% url 'Blog' %}">Blog</a></li>
-                <li class="menu__item {% if request.path == '/contacto' %}seccion{% endif %}"><a href="{% url 'Contacto' %}">Contacto</a></li>
+                <li class="menu__item {% if request.path == '/contacto/' %}seccion{% endif %}"><a href="{% url 'Contacto' %}">Contacto</a></li>
             </ul>
         </nav>
 
