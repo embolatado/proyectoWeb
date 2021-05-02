@@ -3,4 +3,16 @@
 {% block title %}Contacto{% endblock %}
 
 {% block content %}
+
+<div>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>
+            {{miformulario.as_table}}
+        </table>
+            <input type="submit">
+            <input type="reset">            
+    </form>
+</div>
+{{request.POST}}
 {% endblock %}
