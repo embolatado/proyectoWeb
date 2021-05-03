@@ -10,6 +10,12 @@
     <h3>¡Muchas gracias!</h3>
     <p>Sus comentarios son muy importantes.</p>
 
+
+{% elif "error" in request.GET %}
+
+    <h3>Error de servidor</h3>
+    <p>El mensaje no pudo ser enviado en este momento.</p>
+
 {% else %}
 
 <div>
