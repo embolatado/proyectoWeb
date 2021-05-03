@@ -18,7 +18,7 @@ def contacto(request):
             var_msj = request.POST.get("mensaj")
             
             betreff = "Mensaje desde Blog Contacto de " + var_nom
-            nachricht = var_msj + " ::: " var_crr
+            nachricht = var_msj + " :: " + var_crr
             email_desde = settings.EMAIL_HOST_USER
             email_para = ['embolatado@gmail.com']
             send_mail(betreff, nachricht, email_desde, email_para)
