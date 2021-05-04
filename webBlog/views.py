@@ -6,5 +6,3 @@ def inicio(request):
     return render(request, 'webBlog/index.html')
 
 
-def tienda(request):
-    return render(request, 'webBlog/store.html')

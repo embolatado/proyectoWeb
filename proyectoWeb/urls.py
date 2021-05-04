@@ -19,6 +19,7 @@ from webBlog import views
 from serviciosApp import views
 from blog import views
 from contactoApp import views
+from tiendaApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,5 @@ urlpatterns = [
     path('servicios/', include('serviciosApp.urls')),
     path('blog/', include('blog.urls')),
     path('contacto/', include('contactoApp.urls')),
+    path('tienda/', include('tiendaApp.urls'))
 ]
