@@ -11,6 +11,15 @@ header {
     margin-top: 2em;
 }
 
+img {
+    max-width: 500px;
+}
+
+h6 {
+    font-weight: lighter;
+    font-style: italic;
+}
+
 .logo {
     display: block;
     width: 200px;
@@ -79,7 +88,30 @@ header {
     text-align: center;
 }
 
+.grid-contenedor {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: orange;
+}
 
+.grid-elemt {
+    display: flex;
+    border: 1px solid green;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: 0 auto;
+    background-color: indianred;
+    text-align: center;
+    font-weight: normal;
+}
+
+.grid-elemt__image img {
+    width: 90%;
+    justify-content: center;
+    background-color: hotpink;
+}
 
 footer {
     background-color: lightgrey;

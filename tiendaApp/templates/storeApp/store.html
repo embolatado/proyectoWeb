@@ -1,6 +1,55 @@
 {% extends 'webBlog/_base.html' %}
 
+# {% load static %}
+
 {% block title %}Tienda{% endblock %}
 
 {% block content %}
+
+
+
+
+{% for i in prods %}
+<div style="background-color: lightgoldenrodyellow;">
+    <h2>{{ i.nom_prod }}</h2>
+    <h3>{{i.precio|stringformat:".2f"}} €</h3>
+    <p>Sección: {{i.categorias}}</p>
+
+
+    {% if i.imagen %}
+    <div class="imagen-centrada">
+        <img src="{{i.imagen.url}}" alt="">
+    </div>
+    {% else %}
+    <div class="imagen-centrada">
+        <img src="{% static 'webBlog/img/nofoto.png' %}" alt="">
+    </div>
+    <h6>Creado: {{i.created}}</h6>
+    {% endif %}
+</div>
+{% endfor %}
+
+
+<div class="grid-contenedor">
+    {% for i in prods %}
+    <div class="grid-elemt">
+        <div class="grid-elemt__image">
+                <h3>{{ i.nom_prod }}</h3>
+                {% if i.imagen %}
+                <div>
+                    <img src="{{i.imagen.url}}" alt="">
+                </div>
+                {% else %}
+                <div>
+                    <img src="{% static 'webBlog/img/nofoto.png' %}" alt="">
+                </div>
+                {% endif %}
+                <h4>{{i.precio|stringformat:".2f"}} €</h4>
+                <p>Sección: {{i.categorias}}</p>
+        </div>        
+    </div>
+    {% endfor %}
+</div>
+
+
 {% endblock %}
